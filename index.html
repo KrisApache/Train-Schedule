@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TrainSchedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <!-- for date manipulation -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+     
+    <script src="./assets/javascript/script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container h-100">
+        <br>
+            
+        <div class="row header d-flex align-items-center justify-content-center h-100">
+            
+            <div class="jumbotron jumbotron-fluid bg-warning card opc">
+                <div class="container">
+                    <h1 class="display-4 text-center">Always On Time Train Schedule</h1>
+                    <p class="lead text-center">The most accurate train schedule ever created</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row employee-list d-flex align-items-center justify-content-center h-100 opc">
+
+            <div class="card">
+                <div class="card-header bg-danger">
+                    Current Train Schedule
+                </div>
+                <div class="card-body">
+                    <table class="table" id="train-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>                                
+                            </tr>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <br>
+
+        <div class="row employee-form d-flex align-items-center justify-content-md-center h-100 opc">
+
+            <div class="card">
+                <div class="card-header bg-danger">
+                    Add Train
+                </div>
+                <div class="card-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Train Name</label>
+                            <input id="name-input"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Train Name">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Destination</label>
+                            <input id="dest-input"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Destination">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">First Train Time (HH:mm - military time)</label>
+                            <input id="firstTrain-input"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter First Train Time">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Frequency (min)</label>
+                            <input id="freq-input"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Frequency">
+
+                        </div>
+
+                        <button type="submit" class="btn btn-danger" id="submit-data">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <br>
+        
+
+    </div>
+
+    
+    
+
+</body>
+
+</html>

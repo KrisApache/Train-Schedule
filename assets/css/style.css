@@ -1,0 +1,13 @@
+body{
+    /* background-image: url("./../images/backgr.gif"); */
+    /* background-repeat: no-repeat, no-repeat; */
+    background-size: cover;
+}
+
+.container, .card{
+    width: 85%;
+}
+
+.opc{
+    opacity: 0.7;;
+}
